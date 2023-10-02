@@ -35,7 +35,7 @@
                                     <div>
                                         <i class="fa-solid fa-building"></i> {{ $employee->companies->name }}
                                     </div>
-                                    <div class="flex lg:flex-row-reverse">
+                                    <div class="flex flex-row-reverse">
                                         <div class=" flex flex-row gap-2" style="font-size: 15px">
 
                                             <a href="/employees/{{ $employee->id }}/edit"
@@ -56,18 +56,18 @@
                                     </div>
                                 </div>
                             </div>
-                </div>
-                </x-card>
-                @endforeach
-            @else
-                <p>No Employees found</p>
-            @endunless
 
-        </div>
+                        </x-card>
+                    @endforeach
+                @else
+                    <p>No Employees found</p>
+                @endunless
 
-        <div class="mt-6 p-4 lg:mx-10">
-            {{ $employees->links() }}
-        </div>
+            </div>
+
+            <div class="mt-6 p-4 lg:mx-10">
+                {{ $employees->links() }}
+            </div>
         </div>
     @else
         @include('components.login-first')

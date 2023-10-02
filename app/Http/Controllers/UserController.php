@@ -9,12 +9,14 @@ use Illuminate\Validation\Rule;
 class UserController extends Controller
 {
     // Show Register/Create Form
-    public function create() {
+    public function create()
+    {
         return view('users.register');
     }
 
     // Create New User
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $formFields = $request->validate([
             'name' => ['required', 'min:3'],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
@@ -34,32 +36,34 @@ class UserController extends Controller
     }
 
     // Logout User
-    public function logout(Request $request) {
+    public function logout(Request $request)
+    {
         auth()->logout();
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
         return redirect('/')->with('message', 'You have been logged out!');
-
     }
 
     // Show Login Form
-    public function login() {
+    public function login()
+    {
         return view('users.login');
     }
 
     // Authenticate User
-    public function authenticate(Request $request) {
+    public function authenticate(Request $request)
+    {
         $formFields = $request->validate([
             'email' => ['required', 'email'],
             'password' => 'required'
         ]);
 
-        if(auth()->attempt($formFields)) {
+        if (auth()->attempt($formFields)) {
             $request->session()->regenerate();
 
-            return redirect('/')->with('message', 'You are now logged in!');
+            return redirect('/');
         }
 
         return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');

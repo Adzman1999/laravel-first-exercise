@@ -33,7 +33,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex lg:flex-row-reverse">
+                            <div class="flex flex-row-reverse">
                                 <div class=" flex flex-row gap-2" style="font-size: 15px">
 
                                     <a href="/companies/{{ $company->id }}/edit"
