@@ -35,25 +35,26 @@
                                     <div>
                                         <i class="fa-solid fa-building"></i> {{ $employee->companies->name }}
                                     </div>
-                                    <div class="flex flex-row-reverse">
-                                        <div class=" flex flex-row gap-2" style="font-size: 15px">
 
-                                            <a href="/employees/{{ $employee->id }}/edit"
-                                                class="bg-gray-700 rounded text-white py-1 px-5"><i
-                                                    class="fa-solid fa-pen-to-square"></i>
-                                            </a>
+                                </div>
+                            </div>
+                            <div class="flex flex-row-reverse">
+                                <div class=" flex flex-row gap-2" style="font-size: 15px">
+
+                                    <a href="/employees/{{ $employee->id }}/edit"
+                                        class="bg-gray-700 rounded text-white py-1 px-5"><i
+                                            class="fa-solid fa-pen-to-square"></i>
+                                    </a>
 
 
-                                            <form method="POST" action="/employees/{{ $employee->id }}">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="bg-gray-900 rounded text-white py-1 px-5">
-                                                    <i class="fa-solid fa-trash"></i>
-                                                </button>
-                                            </form>
+                                    <form method="POST" action="/employees/{{ $employee->id }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="bg-gray-900 rounded text-white py-1 px-5">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </form>
 
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
