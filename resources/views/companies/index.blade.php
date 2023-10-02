@@ -17,7 +17,7 @@
                                     alt="" />
                                 <div>
 
-                                    <h3 class="text-2xl font-bold">
+                                    <h3 class="fs-1 font-bold">
                                         <a style="text-transform: uppercase">{{ $company->name }}</a>
                                     </h3>
                                     <hr />

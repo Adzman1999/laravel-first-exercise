@@ -13,12 +13,12 @@
                         <x-card>
                             <div class="flex flex-col">
                                 <div class="flex items-center flex-row gap-2">
-                                    <h3 class="text-2xl font-bold">
+                                    <h3 class="fs-1 font-bold">
                                         <p style="text-transform: uppercase">
                                             {{ $employee->first_name }}</p>
                                     </h3>
 
-                                    <h3 class="text-2xl font-bold">
+                                    <h3 class="fs-1 font-bold">
                                         <p style="text-transform: uppercase">
                                             {{ $employee->last_name }}</p>
                                     </h3>
